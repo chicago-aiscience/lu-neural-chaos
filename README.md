@@ -1,3 +1,7 @@
+[![Lint](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml/badge.svg?name=lint)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml)
+[![Test](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml/badge.svg?name=test)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos/branch/main/graph/badge.svg)](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos)
+
 <p align="center">
   <img src="https://github.com/roxie62/neural_operators_for_chaos/blob/main/presentations/diagram_emulator.png" width="700">
 </p>

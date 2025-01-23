@@ -46,6 +46,7 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Warm up uv
+# If you remove this step, workflow will crash because codspeed doesn't like setting up the .venv
         run: uv run python --version
 
       - name: Bench

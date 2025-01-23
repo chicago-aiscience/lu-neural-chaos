@@ -45,6 +45,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
 
+      - name: Warm up uv
+        run: uv run python --version
+
       - name: Bench
         uses: CodSpeedHQ/action@v3
         with:

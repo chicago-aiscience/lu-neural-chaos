@@ -2,6 +2,7 @@
 [![Test](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/test.yml/badge.svg)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/test.yml)
 [![Benchmark](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/bench.yml/badge.svg)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/bench.yml)
 [![Coverage](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos/branch/main/graph/badge.svg)](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos)
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/chicago-aiscience/lu-neural-chaos)
 
 <p align="center">
   <img src="https://github.com/roxie62/neural_operators_for_chaos/blob/main/presentations/diagram_emulator.png" width="700">

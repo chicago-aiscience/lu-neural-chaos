@@ -35,7 +35,7 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: cpredmond98/lu-jiang-neural-operators-for-chaos-4
+          slug: chicago-aiscience/lu-neural-chaos
           files: coverage.xml
 
       - name: Bench

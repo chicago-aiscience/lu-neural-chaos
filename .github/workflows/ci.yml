@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Formatting
+        run: uv run --dev ruff format --check
+
+      - name: Lint
+        run: uv run --dev ruff check
+
+      - name: Type check
+        run: uv run --dev pyright
+
+      - name: Test
+        run: uv run --dev pytest --cov-config=.coveragerc --cov-branch --cov=src/neural_chaos/ --cov-report=xml src/neural_chaos/tests/
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: cpredmond98/lu-jiang-neural-operators-for-chaos-4
+          files: coverage.xml
+
+      - name: Bench
+        uses: CodSpeedHQ/action@v3
+        with:
+          run: uv run --dev pytest src/neural_chaos/benches/ --codspeed
+          token: ${{ secrets.CODSPEED_TOKEN }}

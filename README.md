@@ -66,3 +66,9 @@ After all the LLEs are calculated, we could compare them by running:
 ```
 python eval_scripts/read_LE.py
 ```
+
+## Reference
+- https://pre-commit.com/
+- https://docs.astral.sh/uv/
+- https://docs.astral.sh/ruff/
+- https://microsoft.github.io/pyright/#/

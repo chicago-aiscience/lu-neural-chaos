@@ -1,0 +1,10 @@
+
+.venv/
+.ruff_cache/
+.pytest_cache/
+.codspeed/
+
+__pycache__/
+
+coverage.xml
+.coverage

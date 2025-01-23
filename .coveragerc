@@ -1,0 +1,2 @@
+[run]
+omit = src/neural_chaos/tests/*,src/neural_chaos/benches/*

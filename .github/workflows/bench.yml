@@ -1,0 +1,26 @@
+name: Benchmark
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Warm up uv
+# If you remove this step, workflow will crash because codspeed doesn't like setting up the .venv
+        run: uv run python --version
+
+      - name: Bench
+        uses: CodSpeedHQ/action@v3
+        with:
+          run: uv run --dev pytest src/neural_chaos/benches/ --codspeed
+          token: ${{ secrets.CODSPEED_TOKEN }}

@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Formatting
+        run: uv run --dev ruff format --check
+
+      - name: Lint
+        run: uv run --dev ruff check
+
+      - name: Type check
+        run: uv run --dev pyright

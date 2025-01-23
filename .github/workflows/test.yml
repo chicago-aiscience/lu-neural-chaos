@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Test
+        run: uv run --dev pytest --cov-config=.coveragerc --cov-branch --cov=src/neural_chaos/ --cov-report=xml src/neural_chaos/tests/
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: chicago-aiscience/lu-neural-chaos
+          files: coverage.xml

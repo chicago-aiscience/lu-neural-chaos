@@ -1,5 +1,6 @@
-[![Lint](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml/badge.svg?name=lint)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml)
-[![Test](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml/badge.svg?name=test)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/ci.yml)
+[![Lint](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/lint.yml/badge.svg)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/lint.yml)
+[![Test](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/test.yml/badge.svg)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/test.yml)
+[![Benchmark](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/bench.yml/badge.svg)](https://github.com/chicago-aiscience/lu-neural-chaos/actions/workflows/bench.yml)
 [![Coverage](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos/branch/main/graph/badge.svg)](https://codecov.io/gh/chicago-aiscience/lu-neural-chaos)
 
 <p align="center">
